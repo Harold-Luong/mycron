@@ -1,4 +1,8 @@
-
+/**
+ * The TimeCronExpression class represents a cron expression for specifying time
+ * settings. It parses the cron expression
+ * and provides getter and setter methods for each time component.
+ */
 public class TimeCronExpression {
 
     private String second;
@@ -9,6 +13,11 @@ public class TimeCronExpression {
     private String year;
     private String dayOfWeek;
 
+    /**
+     * Constructs a TimeCronExpression object with the specified cron expression.
+     *
+     * @param cronExpression The cron expression representing the time settings.
+     */
     public TimeCronExpression(String cronExpression) {
         String[] parts = cronExpression.split(" ");
         String second = parts[0];
@@ -26,7 +35,6 @@ public class TimeCronExpression {
         setMonth(month);
         setYear(year);
         setDayOfWeek(dayOfWeek);
-
     }
 
     public String getSecond() {
